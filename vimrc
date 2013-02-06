@@ -62,15 +62,19 @@ Bundle  'kchmck/vim-coffee-script'
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Bundle command are not allowed..
  :let mapleader=","
- :map <F2> :NERDTreeToggle<cr>
+ :map nt :NERDTreeToggle<cr>
  :map fb :FufBuffer<cr>
  :map <leader>ss :source ~/.vimrc<cr>
  :map <leader>ee :edit ~/.vimrc<cr>
+ :map <C-l> :tabn<CR>
+ :map <C-h> :tabp<CR>
+ :map <C-n> :tabnew<CR>
+
  set t_Co=256
  set number
 set sw=2     "shiftwidth=4
 "set ts=2
-set tags=/home/bob/.tags
+set tags=~/.tags
 
 set fencs=utf-8,gb18030,gbk,gb2312
 set encoding=utf-8
@@ -85,9 +89,10 @@ set expandtab
 if v:version > 702
   set autochdir
   set undofile
-  set undodir=/home/bob/.tmp/undofile
+  set undodir=~/.tmp/undofile
 endif
 autocmd FileType html 
+
 set ft=html.markdown
 " let g:Powerline_symbols = 'fancy'
 
